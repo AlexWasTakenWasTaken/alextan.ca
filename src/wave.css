@@ -1,0 +1,65 @@
+.wave-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;      /* or however tall you want the wave area */
+    z-index: 9999;     /* ensure it’s on top of other elements */
+    pointer-events: none; /* optional, lets clicks “pass through” */
+  }
+
+section .wave{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: url(wave.png);
+    background-size: 100% 30px;
+}
+
+.wave-container .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: url("../assets/wave.png");
+    background-size: 1000px 30px;
+}
+  
+  .wave1 {
+    animation: animate1 5s linear infinite;
+    opacity: 0.2;
+  }
+  .wave2 {
+    animation: animate2 10s linear infinite;
+    opacity: 0.15;
+  }
+  .wave3 {
+    animation: animate1 10s linear infinite;
+    opacity: 0.1;
+  }
+  .wave4 {
+    animation: animate2 20s linear infinite;
+    opacity: 0.05;
+  }
+
+@keyframes animate1{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate2{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: -1000px;
+    }
+}
